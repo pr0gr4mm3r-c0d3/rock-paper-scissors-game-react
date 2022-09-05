@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	color: #fafafa;
+	font-family: 'Barlow Semi Condensed', 'Arial', 'Helvetica', 'sans-serif';
+	font-weight: 600, 700;
+}
+
+body {
+	background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
