@@ -1,5 +1,5 @@
+import { Fade, Flip, JackInTheBox, Rotate } from 'react-awesome-reveal';
 import { PickPieceComponent } from './components/PickPieceComponent';
-import { PieceComponent } from './components/PieceComponent';
 import { ResultPickPieceComponent } from './components/ResultPickPieceComponent';
 import { RulesBtnComponent } from './components/RulesBtnComponent';
 import { ScoreComponent } from './components/ScoreComponent';
@@ -21,9 +21,13 @@ const App = () => {
 				<ScoreComponent />
 				<section className='max-w-3xl container flex-col justify-between gap-2'>
 					{!pieceSelected ? (
-						<PickPieceComponent />
+						<JackInTheBox>
+							<PickPieceComponent />
+						</JackInTheBox>
 					) : (
-						<ResultPickPieceComponent />
+						<Fade>
+							<ResultPickPieceComponent />
+						</Fade>
 					)}
 				</section>
 				<RulesBtnComponent />
