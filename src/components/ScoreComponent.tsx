@@ -1,4 +1,8 @@
+import { useGame } from '../hooks/useGame';
+
 export const ScoreComponent = () => {
+	const { gameState } = useGame();
+
 	return (
 		<>
 			<section className='score__panel w-full '>
@@ -10,7 +14,9 @@ export const ScoreComponent = () => {
 
 				<div className='score__panel-points'>
 					<p className='score__panel-points-p'>Score</p>
-					<span className='score__panel-points-span'>12</span>
+					<span className='score__panel-points-span'>
+						{gameState.score}
+					</span>
 				</div>
 			</section>
 		</>

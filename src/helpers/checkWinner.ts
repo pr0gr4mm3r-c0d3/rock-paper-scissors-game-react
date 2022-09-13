@@ -6,7 +6,8 @@ const rules = [
 	{ pick: 'paper', winner: 'rock' },
 ];
 
-export const checkWinner = ({ you, pc }: IPieceSelected): string => {
+type TCheckWinner = 'TIE' | 'YOU WIN' | 'YOU LOSE';
+export const checkWinner = ({ you, pc }: IPieceSelected): TCheckWinner => {
 	if (you.piece === pc.piece) return 'TIE';
 	const found = rules.find(({ pick }) => pick === you.piece);
 	return found && found.winner === pc.piece ? 'YOU WIN' : 'YOU LOSE';
