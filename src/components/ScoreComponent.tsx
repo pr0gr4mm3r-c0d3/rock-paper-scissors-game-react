@@ -1,5 +1,5 @@
 import { useGame } from '../hooks/useGame';
-
+import imgLogo from '../assets/logos/logo.svg';
 export const ScoreComponent = () => {
 	const { gameState } = useGame();
 
@@ -8,7 +8,7 @@ export const ScoreComponent = () => {
 			<section className='score__panel w-full '>
 				<img
 					className='score__panel-img'
-					src='src/assets/logos/logo.svg'
+					src={imgLogo}
 					alt='Logo App'
 				/>
 
