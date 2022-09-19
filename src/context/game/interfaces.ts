@@ -1,13 +1,17 @@
+export interface IScore {
+	you: number;
+	house: number;
+}
 export interface IGameState {
-	score: number;
+	score: IScore;
 }
 
 export type TGameActions =
 	| {
 			type: '[Game] SET_SCORE';
-			payload: number;
+			payload: IScore;
 	  }
 	| {
 			type: '[Game] RESET_SCORE';
-			payload: number;
+			payload: IScore;
 	  };

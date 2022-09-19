@@ -1,13 +1,13 @@
-#wrapper {
-	min-height: 100vh;
-	max-width: 1366px;
-
-	&,
-	.container {
-		margin: 0 auto;
-		width: 95%;
-	}
-	.container {
-		padding-top: 30px;
-	}
-}
+// #wrapper {
+// 	@include flexMixin();
+// 	min-height: 100vh;
+// 	max-width: 1366px;
+// 	&,
+// 	.container {
+// 		margin: 0 auto;
+// 		width: 95%;
+// 	}
+// 	.container {
+// 		padding-top: 30px;
+// 	}
+// }

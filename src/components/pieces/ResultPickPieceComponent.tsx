@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { checkWinner } from '../helpers/checkWinner';
-import { useGame } from '../hooks/useGame';
-import { usePieces } from '../hooks/usePieces';
+import { checkWinner } from 'src/helpers/checkWinner';
+import { useGame } from 'src/hooks/useGame';
+import { usePieces } from 'src/hooks/usePieces';
 import { PieceComponent } from './PieceComponent';
 
+import './styles/PlayAgain.scss';
 export const ResultPickPieceComponent = () => {
 	const [textResult, setTextResult] = useState<string>('');
 	const {
@@ -11,12 +12,12 @@ export const ResultPickPieceComponent = () => {
 		handlerPlayAgain,
 	} = usePieces();
 
-	const { handlerYouWin } = useGame();
+	const { handlerYouWin, handlerYouLose } = useGame();
 
 	const handlerCheckWinner = () => {
 		const iWin = checkWinner(pieceSelected!);
-		iWin === 'YOU WIN' && handlerYouWin();
-		console.log(iWin);
+		if (iWin !== 'TIE')
+			iWin === 'YOU WIN' ? handlerYouWin() : handlerYouLose();
 		setTextResult(iWin);
 	};
 

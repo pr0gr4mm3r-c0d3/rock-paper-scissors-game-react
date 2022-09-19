@@ -6,9 +6,9 @@ export const gameReducer = (
 ) => {
 	switch (type) {
 		case '[Game] SET_SCORE':
-			return { ...state, score: payload };
+			return { ...state, score: { ...payload } };
 		case '[Game] RESET_SCORE':
-			return { ...state, score: 0 };
+			return { ...state, score: { you: 0, house: 0 } };
 		default:
 			return state;
 	}

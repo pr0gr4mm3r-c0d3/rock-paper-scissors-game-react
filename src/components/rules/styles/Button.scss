@@ -1,0 +1,13 @@
+.btn__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 0;
+	.btn {
+		padding: 5px 50px;
+		color: #fff;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		background: transparent;
+	}
+}

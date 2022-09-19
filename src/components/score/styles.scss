@@ -1,0 +1,36 @@
+@import 'src/styles/config/vars';
+.score__panel {
+	margin-top: 70px;
+	max-width: 500px;
+	border: 0.2rem solid $header_outline;
+	border-radius: 15px;
+	padding: 10px;
+	justify-content: space-between;
+
+	&,
+	&-points {
+		display: flex;
+		align-items: center;
+	}
+	&-img {
+		height: 90px;
+	}
+
+	&-points {
+		flex-direction: column;
+		justify-content: center;
+		background: #fafafa;
+		min-width: 90px;
+		width: auto;
+		border-radius: 12px;
+		padding: 10px;
+		color: $dark_text;
+		p {
+			margin: 5.5px;
+		}
+		span {
+			font-size: 2.5em;
+			font-weight: 800;
+		}
+	}
+}

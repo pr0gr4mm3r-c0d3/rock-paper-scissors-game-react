@@ -1,12 +1,7 @@
 import { useContext } from 'react';
 import { PieceContext } from '../context/piece/PieceContext';
 export const usePieces = () => {
-	const { pieceState, handlerPickPiece, handlerPlayAgain } =
-		useContext(PieceContext);
+	const pieceContext = useContext(PieceContext);
 
-	return {
-		pieceState,
-		handlerPickPiece,
-		handlerPlayAgain,
-	};
+	return { ...pieceContext };
 };

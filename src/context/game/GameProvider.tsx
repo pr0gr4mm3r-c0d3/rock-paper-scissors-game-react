@@ -7,22 +7,37 @@ type Props = {
 };
 
 export const INITIAL_STATE: IGameState = {
-	score: 0,
+	score: { you: 0, house: 0 },
 };
 
 export const GameProvider = ({ children }: Props) => {
 	const [gameState, dispatch] = useReducer(gameReducer, INITIAL_STATE);
 	const handlerYouWin = () => {
-		const increment = gameState.score + 1;
-		dispatch({ type: '[Game] SET_SCORE', payload: increment });
+		const { you, house } = gameState.score;
+		dispatch({
+			type: '[Game] SET_SCORE',
+			payload: { you: you + 1, house },
+		});
+	};
+	const handlerYouLose = () => {
+		const { you, house } = gameState.score;
+		dispatch({
+			type: '[Game] SET_SCORE',
+			payload: { house: house + 1, you },
+		});
 	};
 	const handlerResetScore = () => {
-		dispatch({ type: '[Game] RESET_SCORE', payload: 0 });
+		dispatch({ type: '[Game] RESET_SCORE', payload: { you: 0, house: 0 } });
 	};
 	return (
 		<>
 			<GameContext.Provider
-				value={{ gameState, handlerYouWin, handlerResetScore }}
+				value={{
+					gameState,
+					handlerYouWin,
+					handlerYouLose,
+					handlerResetScore,
+				}}
 			>
 				{children}
 			</GameContext.Provider>

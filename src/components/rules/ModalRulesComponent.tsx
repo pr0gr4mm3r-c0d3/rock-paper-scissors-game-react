@@ -1,6 +1,8 @@
-import { Fade } from 'react-awesome-reveal';
-import close from '../assets/icons/icon-close.svg';
-import rules from '../assets/imgs/image-rules.svg';
+import close from 'src/assets/icons/icon-close.svg';
+import rules from 'src/assets/imgs/image-rules.svg';
+
+import './styles/Modal.scss';
+
 interface IProps {
 	closeModal: () => void;
 }

@@ -1,0 +1,24 @@
+.pick__pieces-container {
+	position: relative;
+	margin: 0 auto;
+	min-height: 300px;
+	height: 50vh;
+	background: transparent url('/src/assets/backgrounds/bg-triangle.svg')
+		no-repeat center;
+	background-size: 80% 70%;
+	flex-direction: column;
+	&,
+	.pool__down,
+	.pool__up {
+		display: flex;
+	}
+
+	&,
+	.pool__up {
+		position: relative;
+		justify-content: space-between;
+	}
+	.pool__down {
+		justify-content: center;
+	}
+}

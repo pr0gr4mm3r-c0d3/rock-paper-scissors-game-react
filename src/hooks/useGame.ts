@@ -1,8 +1,7 @@
 import { useContext } from 'react';
 import { GameContext } from '../context/game/GameContext';
 export const useGame = () => {
-	const { gameState, handlerYouWin, handlerResetScore } =
-		useContext(GameContext);
+	const gameContext = useContext(GameContext);
 
-	return { gameState, handlerYouWin, handlerResetScore };
+	return { ...gameContext };
 };

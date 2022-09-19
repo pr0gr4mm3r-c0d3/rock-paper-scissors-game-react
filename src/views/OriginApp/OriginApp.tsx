@@ -1,11 +1,11 @@
-import { Fade, Flip, JackInTheBox, Rotate } from 'react-awesome-reveal';
-import { PickPieceComponent } from './components/PickPieceComponent';
-import { ResultPickPieceComponent } from './components/ResultPickPieceComponent';
-import { RulesBtnComponent } from './components/RulesBtnComponent';
-import { ScoreComponent } from './components/ScoreComponent';
-import { usePieces } from './hooks/usePieces';
+import { Fade, JackInTheBox } from 'react-awesome-reveal';
+import { PickPieceComponent } from 'src/components/pieces/PickPieceComponent';
+import { ResultPickPieceComponent } from 'src/components/pieces/ResultPickPieceComponent';
+import { RulesBtnComponent } from 'src/components/rules/RulesBtnComponent';
+import { ScoreComponent } from 'src/components/score/ScoreComponent';
+import { usePieces } from 'src/hooks/usePieces';
 
-import './styles/App.scss';
+import './styles.scss';
 
 const App = () => {
 	const {
@@ -15,7 +15,7 @@ const App = () => {
 	return (
 		<>
 			<div
-				id='wrapper'
+				id='wrapper__app'
 				className='flex flex-col justify-between items-center'
 			>
 				<ScoreComponent />

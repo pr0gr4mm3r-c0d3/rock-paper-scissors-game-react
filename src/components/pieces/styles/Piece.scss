@@ -1,0 +1,29 @@
+.piece__container {
+	display: block;
+	align-items: center;
+	padding: 15px;
+	border-radius: 50%;
+	&.scissors_gradient {
+		background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+	}
+	&.paper_gradient {
+		background-image: radial-gradient(
+			hsl(230, 89%, 62%),
+			hsl(230, 89%, 65%)
+		);
+	}
+	&.rock_gradient {
+		background-image: radial-gradient(
+			hsl(349, 71%, 52%),
+			hsl(349, 70%, 56%)
+		);
+	}
+
+	.piece__img {
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+		padding: 20px;
+		background: #fff;
+	}
+}

@@ -1,6 +1,8 @@
-import { IPiece } from '../context/piece/interfaces';
-import { getRandomNumber } from '../helpers/getRandomNumber';
-import { usePieces } from '../hooks/usePieces';
+import { IPiece } from '../../context/piece/interfaces';
+import { getRandomNumber } from '../../helpers/getRandomNumber';
+import { usePieces } from '../../hooks/usePieces';
+
+import './styles/Piece.scss';
 
 interface IProps {
 	piece: IPiece;

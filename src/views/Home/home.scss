@@ -1,0 +1,26 @@
+@import 'src/styles/mixins/flexMixin';
+@import 'src/styles/config/vars';
+#wrapper {
+	@include flexMixin();
+	min-height: 100vh;
+	.home__main {
+		&-container {
+			padding: 25px;
+			background: $dark_text;
+			border-radius: 0.5rem;
+			min-width: 300px;
+			max-width: 350px;
+			width: 100%;
+		}
+		&-li {
+			display: block;
+			padding: 0.5rem;
+			cursor: pointer;
+			font-weight: bold;
+			transition: color linear 0.2s;
+			&:hover {
+				color: #ddda;
+			}
+		}
+	}
+}

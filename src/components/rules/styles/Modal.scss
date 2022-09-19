@@ -1,0 +1,67 @@
+@import 'src/styles/config/vars';
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	animation: show 300ms ease-in-out 100ms alternate both;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 100vw;
+		min-height: 100vh;
+		background: #fff;
+		padding: 15px;
+	}
+	&__img-rules {
+		margin-top: 50px;
+		min-height: 380px;
+		max-height: 500px;
+		height: 70vh;
+	}
+	&__close {
+		&-title {
+			display: none;
+		}
+	}
+}
+@keyframes show {
+	to {
+		display: none;
+		opacity: 1;
+	}
+	from {
+		display: block;
+		opacity: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.modal {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		min-height: 100vh;
+
+		&__content {
+			flex-direction: column-reverse;
+			max-width: 600px;
+			min-height: max-content;
+			padding: 25px 15px;
+			border-radius: 1.5rem;
+		}
+		&__close {
+			margin: auto;
+			width: 90%;
+			color: $dark_text;
+			font-weight: bold;
+			&-title {
+				display: block;
+			}
+			&-icon {
+				height: 30px;
+			}
+		}
+	}
+}

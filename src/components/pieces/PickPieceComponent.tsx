@@ -1,5 +1,7 @@
-import { usePieces } from '../hooks/usePieces';
+import { usePieces } from '../../hooks/usePieces';
 import { PieceComponent } from './PieceComponent';
+
+import './styles/PickPiece.scss';
 export const PickPieceComponent = () => {
 	const {
 		pieceState: { pieces, pieceSelected },
