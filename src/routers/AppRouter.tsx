@@ -13,7 +13,7 @@ export const AppRouter = () => {
 				<section id='wrapper'>
 					<div className='home__main-container'>
 						<Routes>
-							<Route path='/'>
+							<Route path='/rock-paper-scissors-game-react'>
 								<Route index element={<MainView />} />
 								<Route
 									path='create'
