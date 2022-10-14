@@ -1,17 +1,30 @@
 import { Routes, Route } from 'react-router-dom';
-import AppRoot from '../AppRoot';
+import { MainView } from '../views/main/MainView';
+import { CreateGameView } from '../views/createGame/CreateGameView';
+import { Fade } from 'react-awesome-reveal';
+import 'src/styles/App.scss';
+import './home.scss';
 import { NoMatch } from '../views/NoMatch';
-import { OriginGameRouter } from './OriginGameRouter';
 
 export const AppRouter = () => {
 	return (
-		<Routes>
-			<Route path='/'>
-				<Route index element={<AppRoot />} />
-				<Route path='/game' element={<OriginGameRouter />} />
-
-				<Route path='*' element={<NoMatch />} />
-			</Route>
-		</Routes>
+		<>
+			<Fade delay={300} duration={1500}>
+				<section id='wrapper'>
+					<div className='home__main-container'>
+						<Routes>
+							<Route path='/'>
+								<Route index element={<MainView />} />
+								<Route
+									path='create'
+									element={<CreateGameView />}
+								/>
+							</Route>
+							<Route path='*' element={<NoMatch />} />
+						</Routes>
+					</div>
+				</section>
+			</Fade>
+		</>
 	);
 };

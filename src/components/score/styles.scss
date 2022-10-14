@@ -1,13 +1,10 @@
 @import 'src/styles/config/vars';
 .score__panel {
-	margin-top: 70px;
 	max-width: 500px;
 	border: 0.2rem solid $header_outline;
 	border-radius: 15px;
 	padding: 10px;
-	justify-content: space-between;
 
-	&,
 	&-points {
 		display: flex;
 		align-items: center;

@@ -10,7 +10,6 @@ interface IProps {
 export const ModalRulesComponent = ({ closeModal }: IProps) => {
 	return (
 		<>
-			{/* <Fade duration={500}> */}
 			<section className='modal'>
 				<div className='modal__content'>
 					<img
@@ -29,7 +28,6 @@ export const ModalRulesComponent = ({ closeModal }: IProps) => {
 					</div>
 				</div>
 			</section>
-			{/* </Fade> */}
 		</>
 	);
 };

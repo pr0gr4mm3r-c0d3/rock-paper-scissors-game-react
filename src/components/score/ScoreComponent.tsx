@@ -1,5 +1,4 @@
 import { useGame } from 'src/hooks/useGame';
-import imgLogo from 'src/assets/logos/logo.svg';
 import './styles.scss';
 import { ScorePanelPointComponent } from './ScorePanelPointComponent';
 export const ScoreComponent = () => {
@@ -7,17 +6,19 @@ export const ScoreComponent = () => {
 
 	return (
 		<>
-			{/* <img className='score__panel-img' src={imgLogo} alt='Logo App' /> */}
-			<section className='score__panel w-full '>
-				<ScorePanelPointComponent
-					title='You'
-					score={gameState.score.you}
-				/>
-				<h2 className='text-5xl'>VS</h2>
-				<ScorePanelPointComponent
-					title='House'
-					score={gameState.score.house}
-				/>
+			<section className='score__panel my-5 w-full'>
+				<h3 className='text-center text-4xl py-2'>Score Panel</h3>
+				<div className='flex justify-between items-center'>
+					<ScorePanelPointComponent
+						title={gameState.player}
+						score={gameState.score.you}
+					/>
+					<h2 className='text-5xl'>VS</h2>
+					<ScorePanelPointComponent
+						title='House'
+						score={gameState.score.house}
+					/>
+				</div>
 			</section>
 		</>
 	);

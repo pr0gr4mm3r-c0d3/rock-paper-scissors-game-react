@@ -9,7 +9,10 @@ export const RulesBtnComponent = () => {
 	return (
 		<>
 			<div className='btn__container flex  md:self-end'>
-				<button className='btn md:mr-10' onClick={handlerToggleModal}>
+				<button
+					className='btn md:mr-10 hover:bg-white hover:text-red-500 hover:scale-105 hover:shadow-2xl transition-all'
+					onClick={handlerToggleModal}
+				>
 					Rules
 				</button>
 			</div>
